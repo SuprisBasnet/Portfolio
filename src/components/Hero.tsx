@@ -12,21 +12,35 @@ export function Hero() {
         </div>
 
         <div className="grid items-center gap-10 md:grid-cols-12 md:gap-12">
-          <h1 className="font-display font-normal leading-[0.9] tracking-[-0.05em] text-[#1D1A17] md:col-span-8" style={{ fontSize: 'clamp(2.55rem, 5.8vw, 5.5rem)' }}>
-            {headline.map((line, row) => (
-              <span key={line} className="block overflow-hidden">
-                {line.split('').map((c, i) => (
-                  <span
-                    key={`${row}-${i}`}
-                    className={`char-reveal inline-block ${row === 2 ? 'text-[#C95F3D]' : ''}`}
-                    style={{ animationDelay: `${0.28 + row * 0.2 + i * 0.025}s` }}
-                  >
-                    {c === ' ' ? '\u00A0' : c}
-                  </span>
-                ))}
-              </span>
-            ))}
-          </h1>
+<h1
+  className="font-display font-normal leading-[0.9] tracking-[-0.05em] text-[#1D1A17] md:col-span-8 break-normal text-balance"
+  style={{ fontSize: 'clamp(2.55rem, 5.8vw, 5.5rem)' }}
+>
+  {headline.map((line, row) => (
+    <span key={line} className="block overflow-hidden whitespace-normal break-normal">
+      {line.split(' ').map((word, wordIndex) => (
+        <span
+          key={`${row}-${wordIndex}`}
+          className="inline-block mr-[0.25em]"
+        >
+          {word.split('').map((c, i) => (
+            <span
+              key={`${row}-${wordIndex}-${i}`}
+              className={`char-reveal inline-block ${
+                row === 2 ? 'text-[#C95F3D]' : ''
+              }`}
+              style={{
+                animationDelay: `${0.28 + row * 0.2 + (wordIndex * 0.08) + i * 0.025}s`,
+              }}
+            >
+              {c}
+            </span>
+          ))}
+        </span>
+      ))}
+    </span>
+  ))}
+</h1>
 
           <div className="relative mx-auto w-full max-w-[250px] md:col-span-4 md:mx-0 md:ml-auto md:max-w-[290px]">
             <div className="aspect-[4/5] overflow-hidden border border-[#1d1a17]/[0.11] bg-[#ebe6de]" aria-label="Portrait of Supris Basnet">
