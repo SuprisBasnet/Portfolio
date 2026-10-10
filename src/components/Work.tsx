@@ -121,9 +121,20 @@ function RideShieldPreview() {
 }
 
 function ProjectVisual({ project }: { project: Project }) {
-  if (project.visual === 'rideshield') {
-    return <RideShieldPreview />;
-  }
+  
+if (project.visual === 'rideshield') {
+  return (
+    <div className="flex h-full w-full items-center justify-center bg-[#0B1420]">
+      <img
+        src="/projects/rideshield-panel.jpg"
+        alt="RideShield simulation dashboard showing weather disruption and risk assessment"
+        loading="lazy"
+        className="h-full w-full object-contain transition-transform duration-700 group-hover:scale-[1.012]"
+      />
+    </div>
+  );
+}
+
 
   const src =
     project.visual === 'flight'
