@@ -58,6 +58,21 @@ export function Hero() {
             <p className="text-[#4E4943] text-base md:text-lg leading-[1.45] max-w-md">
               Year 3 Computer Engineering student at HKUST, building across software, AI and systems, with a focus on useful projects and learning by building.
             </p>
+            <a
+  href="#work"
+  className="mt-4 inline-flex max-w-md flex-wrap items-center gap-x-2 gap-y-1 text-[11px] font-mono uppercase tracking-[0.07em] leading-[1.7] text-[#81796F] transition-colors hover:text-[#C95F3D]"
+>
+  <span
+    className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#C95F3D]"
+    aria-hidden="true"
+  />
+  <span>
+    Recent hackathon build: RideShield · Hong Kong AI Summit BUILD ACROSS · 3–4 Oct 2026
+  </span>
+  <span aria-hidden="true">↗</span>
+</a>
+
+
           </div>
 
           <div className="md:col-span-3 md:col-start-7">

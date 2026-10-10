@@ -7,6 +7,7 @@ export const PORTFOLIO = {
 export const PROJECT_REPOS = {
   flight: 'https://github.com/SuprisBasnet/aeroimpact',
   healthFocus: 'https://github.com/SuprisBasnet/HealthFocus',
+  rideShield: 'https://github.com/SuprisBasnet/RideShield',
 };
 
 export const ACHIEVEMENT_DOCUMENTS: Record<string, string> = {
